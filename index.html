@@ -16,7 +16,7 @@
             font-family: 'Inter', 'Segoe UI', sans-serif;
             line-height: 1.6;
             color: #2c3e50;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(102, 126, 234, 0.1) 100%);
             padding: 30px 15px;
         }
         
@@ -25,7 +25,7 @@
             margin: 0 auto;
             background: white;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            border-radius: 20px;
+            border-radius: 4px;
             overflow: hidden;
         }
         
@@ -62,15 +62,16 @@
         }
         
         .profile-name {
-            font-size: 1.4em;
+            font-size: 1.6em;
             font-weight: 700;
-            margin-bottom: 0px;
+            margin-bottom: 8px;
             letter-spacing: 0.5px;
         }
         .profile-photo > img {
             border-radius: 50%;
             width: 120px;
         }
+        
         .profile-title {
             font-size: 1em;
             opacity: 0.9;
@@ -216,18 +217,73 @@
             text-align: justify;
         }
         
+        .timeline-container {
+            position: relative;
+            padding-left: 50px;
+        }
+        
+        .timeline-line {
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+        
         .experience-item {
-            margin-bottom: 30px;
-            padding: 25px;
-            background: #f8f9fa;
-            border-radius: 12px;
-            border-left: 4px solid #667eea;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            margin-bottom: 40px;
+            padding: 25px 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
         }
         
         .experience-item:hover {
-            transform: translateX(5px);
-            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);
+            transform: translateX(10px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.25);
+            border-color: #667eea;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: -38px;
+            top: 30px;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2);
+            z-index: 2;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2);
+            }
+            50% {
+                box-shadow: 0 0 0 8px rgba(102, 126, 234, 0.1);
+            }
+        }
+        
+        .timeline-year {
+            position: absolute;
+            left: -38px;
+            top: 55px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.75em;
+            font-weight: 700;
+            white-space: nowrap;
+            box-shadow: 0 3px 10px rgba(245, 87, 108, 0.3);
         }
         
         .job-header {
@@ -411,7 +467,7 @@
                     </h3>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <a href="mailto:shivangipatankar31@gmail.com">shivangipatankar31@gmail.com</a>
+                        <a href="mailto:shivangipatankar31@outlook.com">shivangipatankar31@outlook.com</a>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
@@ -433,21 +489,21 @@
                         TECHNICAL SKILLS
                     </h3>
                     <div class="skill-item">
-                        <div class="skill-name">UiPath & RPA</div>
+                        <div class="skill-name">UiPath & Power Automate</div>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 95%"></div>
                         </div>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-name">Power Automate</div>
+                        <div class="skill-name">Kibana & Power BI</div>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 90%"></div>
                         </div>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-name">Python</div>
+                        <div class="skill-name">Python, VBA</div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
+                            <div class="skill-progress" style="width: 80%"></div>
                         </div>
                     </div>
                     <div class="skill-item">
@@ -457,15 +513,15 @@
                         </div>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-name">.NET Development</div>
+                        <div class="skill-name">Dynatrace, CyberArk, Orchestrator</div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 80%"></div>
+                            <div class="skill-progress" style="width: 85%"></div>
                         </div>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-name">Azure & Cloud</div>
+                        <div class="skill-name">JIRA, SNOW & ADO</div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
+                            <div class="skill-progress" style="width: 80%"></div>
                         </div>
                     </div>
                 </div>
@@ -503,78 +559,159 @@
                 <div class="section">
                     <h2 class="section-title">
                         <i class="fas fa-briefcase"></i>
-                        PROFESSIONAL EXPERIENCE
+                        PROFESSIONAL JOURNEY
                     </h2>
                     
-                    <div class="experience-item">
-                        <div class="job-header">
-                            <div class="job-title">
-                                <i class="fas fa-star"></i>
-                                Technical Architect
+                    <div class="timeline-container">
+                        <div class="timeline-line"></div>
+                        
+                        <div class="experience-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-year">2021</div>
+                            <div class="job-header">
+                                <div class="job-title">
+                                    <i class="fas fa-star"></i>
+                                    Technical Architect
+                                </div>
+                                <div class="job-date">June 2021 - Present</div>
                             </div>
-                            <div class="job-date">June 2021 - Present</div>
-                        </div>
-                        <div class="company-info">
-                            <div class="company-name">Coforge Limited</div>
-                            <div class="location">
-                                <i class="fas fa-map-pin"></i>
-                                Pune, Maharashtra
+                            <div class="company-info">
+                                <div class="company-name">Coforge Limited</div>
+                                <div class="location">
+                                    <i class="fas fa-map-pin"></i>
+                                    Pune, Maharashtra
+                                </div>
                             </div>
+                            <div class="company-description">Leading IT services provider specializing in automation and software development solutions</div>
+                            <ul class="responsibilities">
+                                <li>Architect enterprise-grade RPA solutions ensuring scalability, security, and alignment with organizational automation strategy across multiple business domains</li>
+                                <li>Conduct comprehensive automation feasibility assessments and select optimal tools, frameworks, and integration methods to maximize process performance and ROI</li>
+                                <li>Lead end-to-end solution delivery lifecycle encompassing requirement gathering, process design, development, deployment, and hypercare support</li>
+                                <li>Establish and enforce coding standards, best practices, and reusable component libraries to maintain consistency across RPA initiatives</li>
+                                <li>Partner with cross-functional stakeholders to identify automation opportunities and provide architectural guidance on solution design</li>
+                            </ul>
                         </div>
-                        <div class="company-description">Leading IT services provider specializing in automation and software development solutions</div>
-                        <ul class="responsibilities">
-                            <li>Architect enterprise-grade RPA solutions ensuring scalability, security, and alignment with organizational automation strategy across multiple business domains</li>
-                            <li>Conduct comprehensive automation feasibility assessments and select optimal tools, frameworks, and integration methods to maximize process performance and ROI</li>
-                            <li>Lead end-to-end solution delivery lifecycle encompassing requirement gathering, process design, development, deployment, and hypercare support</li>
-                            <li>Establish and enforce coding standards, best practices, and reusable component libraries to maintain consistency across RPA initiatives</li>
-                            <li>Partner with cross-functional stakeholders to identify automation opportunities and provide architectural guidance on solution design</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="experience-item">
-                        <div class="job-header">
-                            <div class="job-title">
-                                <i class="fas fa-laptop-code"></i>
-                                Lead Developer
+                        
+                        <div class="experience-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-year">2020</div>
+                            <div class="job-header">
+                                <div class="job-title">
+                                    <i class="fas fa-laptop-code"></i>
+                                    Lead Developer
+                                </div>
+                                <div class="job-date">Dec 2020 - May 2021</div>
                             </div>
-                            <div class="job-date">Dec 2020 - May 2021</div>
-                        </div>
-                        <div class="company-info">
-                            <div class="company-name">Xoriant</div>
-                            <div class="location">
-                                <i class="fas fa-map-pin"></i>
-                                Pune, Maharashtra
+                            <div class="company-info">
+                                <div class="company-name">Xoriant</div>
+                                <div class="location">
+                                    <i class="fas fa-map-pin"></i>
+                                    Pune, Maharashtra
+                                </div>
                             </div>
+                            <div class="company-description">Global product engineering and technology services company</div>
+                            <ul class="responsibilities">
+                                <li>Analyzed and documented 20+ business processes for RPA viability, enabling 3 high-impact automation initiatives</li>
+                                <li>Collaborated with design teams, contributing technical insights for 7 RPA implementations that boosted productivity by 25%</li>
+                                <li>Orchestrated comprehensive testing for 2 major deployments, achieving 90%+ user acceptance rates</li>
+                            </ul>
                         </div>
-                        <div class="company-description">Global product engineering and technology services company</div>
-                        <ul class="responsibilities">
-                            <li>Analyzed and documented 20+ business processes for RPA viability, enabling 3 high-impact automation initiatives</li>
-                            <li>Collaborated with design teams, contributing technical insights for 7 RPA implementations that boosted productivity by 25%</li>
-                            <li>Orchestrated comprehensive testing for 2 major deployments, achieving 90%+ user acceptance rates</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="experience-item">
-                        <div class="job-header">
-                            <div class="job-title">
-                                <i class="fas fa-chart-line"></i>
-                                Program Analyst
+                        
+                        <div class="experience-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-year">2018</div>
+                            <div class="job-header">
+                                <div class="job-title">
+                                    <i class="fas fa-chart-line"></i>
+                                    Program Analyst
+                                </div>
+                                <div class="job-date">Oct 2018 - Dec 2020</div>
                             </div>
-                            <div class="job-date">Oct 2018 - Dec 2020</div>
-                        </div>
-                        <div class="company-info">
-                            <div class="company-name">WNS Global Services Pvt. Ltd</div>
-                            <div class="location">
-                                <i class="fas fa-map-pin"></i>
-                                Pune, Maharashtra
+                            <div class="company-info">
+                                <div class="company-name">WNS Global Services Pvt. Ltd</div>
+                                <div class="location">
+                                    <i class="fas fa-map-pin"></i>
+                                    Pune, Maharashtra
+                                </div>
                             </div>
+                            <div class="company-description">Leading global business process management and outsourcing company</div>
+                            <ul class="responsibilities">
+                                <li>Drove agile development cycles for 4 RPA projects, reducing average process cycle time by 35%</li>
+                                <li>Led requirements gathering initiatives resulting in successful automation of 3 critical internal processes</li>
+                                <li>Designed and delivered training programs improving team performance by 30% over 6 months</li>
+                            </ul>
                         </div>
-                        <div class="company-description">Leading global business process management and outsourcing company</div>
-                        <ul class="responsibilities">
-                            <li>Drove agile development cycles for 4 RPA projects, reducing average process cycle time by 35%</li>
-                            <li>Led requirements gathering initiatives resulting in successful automation of 3 critical internal processes</li>
-                            <li>Designed and delivered training programs improving team performance by 30% over 6 months</li>
-                        </ul>
+                        
+                        <div class="experience-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-year">2016</div>
+                            <div class="job-header">
+                                <div class="job-title">
+                                    <i class="fas fa-tasks"></i>
+                                    Business Analyst
+                                </div>
+                                <div class="job-date">Feb 2016 - Sep 2018</div>
+                            </div>
+                            <div class="company-info">
+                                <div class="company-name">Adamos Technology</div>
+                                <div class="location">
+                                    <i class="fas fa-map-pin"></i>
+                                    Mysore, Karnataka
+                                </div>
+                            </div>
+                            <div class="company-description">Technology company specializing in process automation and optimization</div>
+                            <ul class="responsibilities">
+                                <li>Documented and optimized 10+ existing workflows for pilot automation programs, achieving 15% reduction in operational costs</li>
+                                <li>Developed comprehensive test scenarios for pre-launch RPA systems, identifying and resolving critical issues prior to production deployment</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="experience-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-year">2014</div>
+                            <div class="job-header">
+                                <div class="job-title">
+                                    <i class="fas fa-headset"></i>
+                                    Tech Support Engineer
+                                </div>
+                                <div class="job-date">Sep 2014 - Dec 2015</div>
+                            </div>
+                            <div class="company-info">
+                                <div class="company-name">Mphasis (Hewlett Packard Enterprise)</div>
+                                <div class="location">
+                                    <i class="fas fa-map-pin"></i>
+                                    Bangalore, Karnataka
+                                </div>
+                            </div>
+                            <div class="company-description">IT services company providing infrastructure technology and application solutions</div>
+                            <ul class="responsibilities">
+                                <li>Provided SQL support across multiple projects, collaborating with cross-functional teams to automate diverse business processes</li>
+                                <li>Managed client communications and delivered end-to-end project solutions, enhancing efficiency and minimizing manual errors</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="experience-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-year">2013</div>
+                            <div class="job-header">
+                                <div class="job-title">
+                                    <i class="fas fa-code"></i>
+                                    Jr. Software Developer
+                                </div>
+                                <div class="job-date">Aug 2013 - Aug 2014</div>
+                            </div>
+                            <div class="company-info">
+                                <div class="company-name">Adamos Technology</div>
+                                <div class="location">
+                                    <i class="fas fa-map-pin"></i>
+                                    Mysore, Karnataka
+                                </div>
+                            </div>
+                            <div class="company-description">Technology company specializing in process automation and optimization</div>
+                            <ul class="responsibilities">
+                                <li>Developed and maintained 10 enterprise websites using VBA, Python, WordPress, and MySQL, enhancing functionality and user experience</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 

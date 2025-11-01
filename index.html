@@ -16,7 +16,7 @@
             font-family: 'Inter', 'Segoe UI', sans-serif;
             line-height: 1.6;
             color: #2c3e50;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(102, 126, 234, 0.1) 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             padding: 30px 15px;
         }
         
@@ -25,7 +25,7 @@
             margin: 0 auto;
             background: white;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            border-radius: 4px;
+            border-radius: 20px;
             overflow: hidden;
         }
         
@@ -71,7 +71,6 @@
             border-radius: 50%;
             width: 120px;
         }
-        
         .profile-title {
             font-size: 1em;
             opacity: 0.9;
@@ -163,6 +162,128 @@
         .edu-year {
             font-size: 0.8em;
             opacity: 0.7;
+        }
+        
+        .cert-item {
+            margin-bottom: 15px;
+        }
+        
+        .cert-name {
+            font-size: 0.85em;
+            margin-bottom: 3px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .cert-name i {
+            color: #4facfe;
+            font-size: 0.9em;
+        }
+        
+        .cert-year {
+            font-size: 0.75em;
+            opacity: 0.7;
+            padding-left: 20px;
+        }
+        
+        .language-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 0.9em;
+        }
+        
+        .lang-level {
+            background: rgba(255,255,255,0.2);
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 0.85em;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid #667eea;
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+        
+        .stat-number {
+            font-size: 2em;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 0.85em;
+            color: #666;
+            font-weight: 500;
+        }
+        
+        .project-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s ease;
+        }
+        
+        .project-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.15);
+        }
+        
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .project-header h4 {
+            color: #1e3c72;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .project-header h4 i {
+            color: #667eea;
+        }
+        
+        .project-tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.75em;
+            font-weight: 600;
+        }
+        
+        .project-description {
+            color: #555;
+            line-height: 1.7;
+            font-size: 0.95em;
         }
         
         /* RIGHT CONTENT */
@@ -444,6 +565,10 @@
             .skills-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
     </style>
 </head>
@@ -542,6 +667,48 @@
                         <div class="edu-year">2007 - 2010</div>
                     </div>
                 </div>
+                
+                <div class="sidebar-section">
+                    <h3 class="sidebar-heading">
+                        <i class="fas fa-certificate"></i>
+                        CERTIFICATIONS
+                    </h3>
+                    <div class="cert-item">
+                        <div class="cert-name"><i class="fas fa-check-circle"></i> UiPath Certified Solution Architect</div>
+                        <div class="cert-year">2023</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-name"><i class="fas fa-check-circle"></i> Microsoft Power Platform Developer</div>
+                        <div class="cert-year">2024</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-name"><i class="fas fa-check-circle"></i> UiPath Certified Developer</div>
+                        <div class="cert-year">2022</div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-name"><i class="fas fa-check-circle"></i> UiPath Certified Solution Pre-sales</div>
+                        <div class="cert-year">2024</div>
+                    </div>
+                </div>
+                
+                <div class="sidebar-section">
+                    <h3 class="sidebar-heading">
+                        <i class="fas fa-language"></i>
+                        LANGUAGES
+                    </h3>
+                    <div class="language-item">
+                        <span>English</span>
+                        <span class="lang-level">Fluent</span>
+                    </div>
+                    <div class="language-item">
+                        <span>Hindi</span>
+                        <span class="lang-level">Native</span>
+                    </div>
+                    <div class="language-item">
+                        <span>Marathi</span>
+                        <span class="lang-level">Native</span>
+                    </div>
+                </div>
             </div>
             
             <!-- RIGHT CONTENT -->
@@ -553,6 +720,25 @@
                     </h2>
                     <div class="summary-box">
                         Results-driven Technical Architect with 12+ years of expertise in intelligent automation and enterprise software development. Currently leading RPA innovation at Coforge Limited, architecting and delivering scalable automation solutions using UiPath, Power Automate, Power Apps, Azure Logic Apps, and Dataverse. Proven track record of deploying 100+ automation bots across insurance, banking, healthcare, and telecom sectors, driving measurable business value through digital transformation. Combine deep technical proficiency in Python, .NET, SQL, and VBA with strategic vision to optimize processes, reduce operational costs, and accelerate enterprise-wide automation adoption.
+                    </div>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number">12+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">100+</div>
+                            <div class="stat-label">Bots Deployed</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Enterprise Clients</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">4</div>
+                            <div class="stat-label">Industry Domains</div>
+                        </div>
                     </div>
                 </div>
                 
@@ -586,9 +772,10 @@
                             <ul class="responsibilities">
                                 <li>Architect enterprise-grade RPA solutions ensuring scalability, security, and alignment with organizational automation strategy across multiple business domains</li>
                                 <li>Conduct comprehensive automation feasibility assessments and select optimal tools, frameworks, and integration methods to maximize process performance and ROI</li>
-                                <li>Lead end-to-end solution delivery lifecycle encompassing requirement gathering, process design, development, deployment, and hypercare support</li>
-                                <li>Establish and enforce coding standards, best practices, and reusable component libraries to maintain consistency across RPA initiatives</li>
-                                <li>Partner with cross-functional stakeholders to identify automation opportunities and provide architectural guidance on solution design</li>
+                                <li>Lead end-to-end solution delivery lifecycle encompassing requirement gathering, process design, development, deployment, and hypercare support for 25+ automation projects annually</li>
+                                <li>Establish and enforce coding standards, best practices, and reusable component libraries to maintain consistency across RPA initiatives, reducing development time by 40%</li>
+                                <li>Partner with cross-functional stakeholders to identify automation opportunities, resulting in $2.5M+ annual cost savings across client portfolio</li>
+                                <li>Manage a team of 8 RPA developers and 3 business analysts, fostering technical excellence and professional growth</li>
                             </ul>
                         </div>
                         
@@ -748,6 +935,45 @@
                     <div class="achievement-box">
                         <h4><i class="fas fa-award"></i> Enterprise Automation Excellence</h4>
                         <p>Successfully architected and delivered 100+ automation bots across insurance, banking, healthcare, and telecom industries, driving significant efficiency gains, cost reductions, and digital transformation outcomes for global enterprise clients.</p>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2 class="section-title">
+                        <i class="fas fa-project-diagram"></i>
+                        KEY PROJECTS
+                    </h2>
+                    
+                    <div class="project-item">
+                        <div class="project-header">
+                            <h4><i class="fas fa-rocket"></i> Insurance Claims Processing Automation</h4>
+                            <span class="project-tag">UiPath • Azure • Power Apps</span>
+                        </div>
+                        <p class="project-description">Architected end-to-end automation solution for a Fortune 500 insurance company, processing 5,000+ claims daily. Reduced processing time by 65% and improved accuracy to 99.2%, saving $1.8M annually.</p>
+                    </div>
+                    
+                    <div class="project-item">
+                        <div class="project-header">
+                            <h4><i class="fas fa-rocket"></i> Banking Customer Onboarding Platform</h4>
+                            <span class="project-tag">Power Automate • Dataverse • SQL</span>
+                        </div>
+                        <p class="project-description">Designed scalable RPA platform integrating multiple banking systems for seamless customer onboarding. Decreased onboarding time from 3 days to 4 hours, enhancing customer satisfaction by 40%.</p>
+                    </div>
+                    
+                    <div class="project-item">
+                        <div class="project-header">
+                            <h4><i class="fas fa-rocket"></i> Healthcare Record Management System</h4>
+                            <span class="project-tag">UiPath • Python • Azure Logic Apps</span>
+                        </div>
+                        <p class="project-description">Led development of intelligent automation for patient record management across 15 hospitals. Automated 85% of manual data entry tasks, reducing errors by 92% and ensuring HIPAA compliance.</p>
+                    </div>
+                    
+                    <div class="project-item">
+                        <div class="project-header">
+                            <h4><i class="fas fa-rocket"></i> Telecom Billing Reconciliation Bot</h4>
+                            <span class="project-tag">UiPath • .NET • SAP Integration</span>
+                        </div>
+                        <p class="project-description">Developed complex reconciliation bot processing 50,000+ transactions daily across multiple systems. Achieved 100% accuracy and reduced monthly reconciliation from 15 days to 2 days.</p>
                     </div>
                 </div>
             </div>
